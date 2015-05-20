@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>dataviz</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=false;">
+<link rel="stylesheet" href="css/style2.css">
+<link href='http://fonts.googleapis.com/css?family=Karla|Montserrat:400,700' rel='stylesheet' type='text/css'><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:300italic,400,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,400,700,100' rel='stylesheet' type='text/css'>
+<script src="js/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://code.highcharts.com/modules/heatmap.js"></script>
+<style>
+@font-face
+{
+font-family: avenirbold;
+src: url('AvenirLTStd-Black.ttf'),
+     url('AvenirLTStd-Black.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+@font-face
+{
+font-family: avenir;
+src: url('AvenirLTStd-Book.ttf'),
+     url('AvenirLTStd-Book.eot'); /* IE9+ */
+font-weight:bold;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+			<br/>
+			<h1 class="centerwords">"Getting Heavier, Younger"</h1>
+			<br/>
+		<h1 class="centerwords">Why Birth Cohort Differences in Obesity Matter</h1>
+		<br/>
+		<br/>
+		<p><em>This series of data visualizations is based on data from the National Health and Nutrition Examination Survey (NHANES), and work previously published by <a href="http://joycelee.me/">Joyce Lee</a>, <a href="https://twitter.com/joyclee">a.k.a. Doctor as Designer</a> and colleagues: <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=lee+gurney+heavier">Lee JM, Pilli S, Gebremariam A, Keirns CC, Davis MM, Vijan S, Freed GL, Herman WH, Gurney JG. Getting heavier, Younger:  Birth cohort effects on obesity over the life course. Int J Obes (Lond) 2010 Apr;34(4):614-23.</a></em>
+		 <br>
+		 <br>
+		There is growing awareness about the problem of overweight and obesity in the US, which is associated wtih increased rates of cardiovascular disease, type 2 diabetes, and premature mortality. The burden of overweight and obesity is substantial, for both US adults and children. 
+		<br>This graph below shows the burden of overweight and obesity in the US population for children and adults for the year 2012, based on data from NHANES.</p>
+		<br/>
+		<p class="explain">Click on the buttons to look at the overall burden of overweight, obesity, and both combined for children and adults. Overweight is defined as an Body Mass Index (BMI) Percentile ≥ 85th% & <95th% for children and a BMI ≥25 & < 30 for adults. Obesity is defined as a BMI ≥95th% for children and a BMI>30 for adults. </p>
+
+		<br/>
+		<br/>			
+		<div id="tooltip1"></div>			<div class="container-inner">
+			<div id="graph1" style="width: 100%; height: 100%;"></div>		</div>
+		<br/>			
+		<br/>	
+		<br/>						
+		<div id="container-buttons1">
+			<div class="section2-buttons buttonactive" id="sticker-button1"><p class="centerwords">overweight</p></div>
+			<div class="section2-buttons" id="sticker-button2"><p class="centerwords">obese</p></div>
+			<div class="section2-buttons" id="sticker-button3"><p class="centerwords">overweight/obese</p></div>
+		</div>
+		<br/>
+		<br/>
+		
+		<p>The next graph shows how the burden of overweight and obesity has changed in the US for children and adults over the last 40 years, from 1970 to 2012.</p>
+		<br>
+		<p class="explain">Click on the buttons to look at the overall burden of overweight, obesity, and both combined for children and adults over a 40 year period. </p>
+
+		<br/>
+		<br/>		<div class="container-inner">
+			<div id="graph2" style="width: 100%; height: 100%; margin: 0 auto"></div>			<div id="graph2x" style="width: 100%; height: 100%; margin: 0 auto"></div>		</div>
+		<br/>		
+		<div id="container-buttons">
+			<div class="section2-buttons buttonactive" id="gragh2b-1"><p class="centerwords">overweight</p></div>
+			<div class="section2-buttons" id="gragh2b-2"><p class="centerwords">obese</p></div>
+			<div class="section2-buttons" id="gragh2b-3"><p class="centerwords">overweight/obese</p></div>
+		</div>
+				<br/>
+		<br/>
+		<br/>
+		<p>Based on these estimates, overweight and obesity in adults seems to be a much bigger problem compared with children. But let’s look at the problem of obesity from a different perspective, and evaluat how obesity is changing across birth cohorts.</p>
+		<br/>
+		<br/>			
+		<br/>				
+		<h2 class="centerwords">“To know where people are today, focus on their generation, not their age”
+			<br></h2><h3 class="centerwords">William Strauss</h3></p>
+		<br/>				
+		<br/>			
+		<p>Let’s look at the obesity data using a different approach. Let’s instead divide people into groups by their year of birth (birth cohorts). and look at rates of obesity for a birth cohort at specific ages over the life course. </p>
+		<br/>
+		<p>For example, this green line shows obesity rates for the 1926–1935 birth cohort over time. When the cohort was 30–39 years of age, they had a 13% burden of obesity. By the time they reached 70–79 years of age, they had a 31% burden of obesity. </p>
+		<br/>
+		<br/>				
+		<br/>								
+		<div class="container-inner">
+			<div id="graph3" style="width: 100%; height: 100%; margin: 0 auto"></div>		</div>
+		<br/>
+		<br/>
+		<br/>
+<p><em>This next graph shows the obesity rates for each birth cohort. Click on the buttons for each birth cohort to see their obesity trajectory. </em>
+	<br>
+	<br>You will see that lines are moving up (higher rates of obesity for a given age) and to the left (a greater duration of obesity over the lifecourse for the younger generation></em>. </p>
+<br/>
+		<br/>
+		<br/>
+	<div class="container-inner">
+		<div id="graph5" style="width: 100%; height: 100%; margin: 0 auto"></div>	</div>
+		<br />
+		<br />
+<br />
+
+
+		<div id="container-buttons4">
+			<div class="sections-buttons buttonactive8" id="button8"><p class="centerwords smallwords">1996 – 2005</p></div>																																	
+			<div class="sections-buttons " id="button7"><p class="centerwords smallwords">1986 – 1995</p></div>
+			<div class="sections-buttons " id="button6"><p class="centerwords smallwords">1976 – 1985</p></div>
+			<div class="sections-buttons " id="button5"><p class="centerwords smallwords">1966 – 1975</p></div>
+			<div class="sections-buttons " id="button4"><p class="centerwords smallwords">1956 – 1965</p></div>
+			<div class="sections-buttons " id="button3"><p class="centerwords smallwords">1946 – 1955</p></div>
+			<div class="sections-buttons " id="button2"><p class="centerwords smallwords">1936 – 1945</p></div>		
+			<div class="sections-buttons " id="button1"><p class="centerwords smallwords">1926 – 1935</p></div>
+		</div>
+		<br />
+		
+<br />		
+<br />		
+		<p>Finally here is the data stratified by male vs. female and black vs. white. <em>Press the buttons to view age and race specific trends.</em> 
+		<br />
+		
+<br />		
+<br />					<div class="container-inner">
+		<div id="graph4" style="wdth: 100%; height: 100%; margin: 0 auto"></div>	</div>		<br/>		<br/>		
+		<div id="container-buttons3">		<div id="img-container"><img src="img/legend.png"/></div>
+			<div class="section3-buttons section2-buttons  buttonactive" id="gragh3b-1"><p class="centerwords">male</p></div>
+
+			<div class="section3-buttons section2-buttons" id="gragh3b-2"><p class="centerwords">female</p></div>
+			<div class="section3-buttons section2-buttons" id="gragh3b-3"><p class="centerwords">white</p></div>
+			<div class="section3-buttons section2-buttons" id="gragh3b-4"><p class="centerwords">black</p></div>
+		</div>
+		<br />
+		<br />
+		<br />
+
+</div>
+<script src="data.js" type='text/javascript'></script>
+	
+<script type='text/javascript'>
+
+
+
+$(function () {var ticknumber=1;var radiusnumber=8;var radiusnumbers=6;var radiusnumber1=2;var yesorno=true;
+	var windowsize=$( window ).width();if(windowsize<=400){var radiusnumber=2;var radiusnumbers=2;var yesorno=false;var ticknumber=2;}
+
+	 Highcharts.setOptions({
+        colors: ['#B6F702','#4099FF ', '#6CC8BD','#64BC46','#FBE106','#EB6931','#B03851','#C59FC7']
+    });
+	var sectionheight=$( window ).height();
+		$( "#footer" ).css( "bottom", "0px");
+
+	var category1=['Overweight','Obese','Overweight and obese'];
+	var childrenfirst=[14.8,16.9,31.7];
+    var adultfirst=[34.4,33.9,68.3];
+	var childrenfirstfirst=[[4, 5, 9, 14, 16,14, 16]];
+	var adultfirstfirst=[[10, 12, 19, 27, 30, 33, 32]];
+	var childrensecond=[[ 10, 10.6, 10.1, 14.3, 13.4, 14.3, 15.9, 13.7, 15.1, 14.9, 15.3],[4.6,5.7,6.2,11.4,13.9,15.2,18.2, 15.7, 17.2, 16.7, 16.8],[14.6,16.3,16.4,25.7,27.2,29.5,34.1, 29.4, 32.3, 31.6, 32.1]];
+	var adultsecond=[[32.9, 31, 30.5, 31.8, 33.3, 34.7, 33.7, 32.4, 34, 33, 33.5],[14.3,13.8,13.8,21.6,29.6, 29.7, 31.7, 33.8, 33, 35.3, 34.6],[47.2,44.9,44.3,53.4,62.9,64.3,65.4, 66.2, 67, 68.3, 68.1]];
+	var year1=[[13,null,null,null, null,null,null, null],[11.1,null,null,null, null,null,null, null],[10.5,null,null,null, null,null,null, null],[14.3,null,null,null, null,null,null, null]];
+	var year2=[[17.4,18.8,null,null, null,null,null, null],[14.4,18,null,null, null,null,null, null],[14.5,16.2,null,null, null,null,null, null],[17.3,24.5,null,null, null,null,null, null]];
+	var year3=[[13.6, 15.7, 23.3,null, null,null,null, null],[14.7,14.5,24.3,null, null,null,null, null],[13.4,14.3,20.5,null, null,null,null, null],[15.9,19.9,36.4,null, null,null,null, null]];
+	var year4=[[5.7, 9.9, 20.3,27.8, null,null,null, null],[6.1,9.4,27.4,31.8, null,null,null, null],[5.7,9.2,20.5,27.5, null,null,null, null],[6.2,13.2,37.4,43.3, null,null,null, null]];
+	var year5=[[5.5, 5.3, 11.9, 25.2, 35.2,null,null, null],[5.8,6.3,13.1,30.9, 37.6,null,null, null],[5.8,5.6,11.7,26.2, 36,null,null, null],[4.7,6.9,19.3,33.9, 45.1,null,null, null]];
+	var year6=[[null, 7.8, 8.5, 16.9, 26.4, 36.5,null, null],[null,6.2,8.9,24.2, 34.6, 37.9,null, null],[null,6.8,8.2,19.2, 29, 37,null, null],[null, 8.7,13.3, 25.7, 39, 44.8,null, null]];
+	var year7=[[null, null, 8, 13.5, 17.1, 29.2,38.1, null],[null, null, 10.4, 15.2, 26.5, 43.2, 40.8, null],[null,null, 8.1, 12.9, 20.1, 36.3, 39.9, null],[null, null,17.9, 26.7, 33.9, 41.9, 50.7, null]];
+	var year8=[[null, null, null, 9.9, 15.2, 27.1, 31.2, 29.4],[null, null, null, 17, 18, 30.5,38, 33.3],[null,null, null, 11.5, 15.8, 28.7, 34.6, 30.6],[null, null,null,null, 23.8, 33.6, 41.1, 50.4]];
+	var chart = new Highcharts.Chart({
+            chart: {
+			   
+				borderColor:  null,
+				backgroundColor: null,
+                renderTo: 'graph1',
+                type: 'column',
+                borderWidth: 1,
+				marginTop: 10,
+				marginRight: 0,
+				spacingLeft: 0,
+				spacingBottom: 0,
+				style: {
+					fontFamily: '"roboto", sans-serif', // default font
+					fontSize: '12px',
+					background:'#000000000000',
+				}
+            },
+            title: {
+                text: '',
+            },
+			tooltip: {
+				enabled: false
+			},
+			legend: {
+				enabled: false,
+				itemStyle: {
+					color: '#0F6698',
+				},
+			},
+            credits: { 
+               position: {
+                  align: 'center',
+               },
+            },
+            xAxis: {				tickInterval: ticknumber,
+                categories: ['Children', 'Adult' ],
+				tickColor: null,				tickInterval: ticknumber,
+				labels: {
+					style: {
+						color: '#0F6698',
+						fontSize: '20px'
+					}
+				}
+				
+            },	
+			yAxis: {
+				max: 80,
+				title: {
+                    text: '% obesity',
+
+                },
+				
+				 gridLineColor: 'rgba(30,146,168,0.5)',
+				 gridLineColorDashStyle: 'dashdot',
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					},
+					
+				},
+				minRange: 20
+			},
+            plotOptions: {
+				 series: {
+					borderColor: null,
+					dataLabels: {
+						enabled: true,
+						y: 0,
+						style: {
+							color: '#0',
+							fontSize: '20px'
+						}
+
+					},
+				}
+            },
+            series: [{
+                name: '',
+                data: [14.8, 34.4],
+				
+            },]
+        });
+	var chart = new Highcharts.Chart({
+            chart: {
+			   
+				borderColor:  null,
+				backgroundColor: null,
+                renderTo: 'graph2',
+                type: 'line',
+                borderWidth: 1,
+				marginTop: 10,
+				marginRight: 0,
+				spacingLeft: 0,
+				spacingBottom: 0,
+				style: {
+					fontFamily: '"roboto", sans-serif', // default font
+					fontSize: '12px',
+					background:'null',
+					fontColor:'red'
+				}
+            },
+            title: {
+                text: '',
+            },
+			tooltip: {
+				enabled: false
+			},
+			legend: {
+				enabled: true,
+				itemMarginTop: 10,
+				itemMarginBottom: 10,
+				itemDistance: 10,
+				itemStyle: {
+					color: '#000000',
+				},
+			},
+            credits: { 
+               position: {
+                  align: 'center',
+               },
+            },
+            xAxis: {				tickInterval: ticknumber,
+                categories: ['1970', '1973', '1978', '1991','1999','2001', '2003','2005', '2007','2009', '2011' ],
+				tickColor: null,
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				}
+				
+            },	
+			yAxis: {
+				max: 80,
+				min: 0,
+				
+				title: {
+                    text: '% obesity'
+                },
+				
+				 gridLineColor: 'rgba(30,146,168,0.5)',
+				 gridLineColorDashStyle: 'dashdot',
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				},
+				minRange: 20
+
+			},
+            plotOptions: {
+				 series: {
+					borderColor: null,
+					dataLabels: {
+						enabled: true,
+						y: 0,
+						style: {
+							color: '#000000',
+							fontSize: '20px'
+						}
+
+					},
+				}
+            },
+            series: [{
+                name: 'Children',
+                data: [ 10, 10.6, 10.1, 14.3, 13.4, 14.3, 15.9, 13.7, 15.1, 14.9, 15.3 ],
+				marker: {
+					radius: radiusnumber,
+					symbol: 'circle'
+				}
+            }, {
+                name: 'Adult',
+                data: [32.9, 31, 30.5, 31.8, 33.3, 34.7, 33.7, 32.4, 34, 33, 33.5],
+				marker: {
+					radius: radiusnumber,
+					symbol: 'circle'
+				}
+				
+            }]
+        });
+	var chart = new Highcharts.Chart({            chart: {			   				borderColor:  null,				backgroundColor: null,                renderTo: 'graph2x',                type: 'line',                borderWidth: 1,				marginTop: 10,				marginRight: 0,				spacingLeft: 0,				spacingBottom: 0,				style: {					fontFamily: '"roboto", sans-serif', // default font					fontSize: '12px',					background:'null',					fontColor:'red'				}            },            title: {                text: '',            },			tooltip: {				enabled: false			},			legend: {				enabled: true,				itemMarginTop: 10,				itemMarginBottom: 10,				itemDistance: 10,				itemStyle: {					color: '#000000',				},			},            credits: {                position: {                  align: 'center',               },            },            xAxis: {				tickInterval: ticknumber,				                categories: ['1970', '1973', '1978', '1991','1999','2001', '2003','2005', '2007','2009', '2011' ],				tickColor: null,				labels: {					style: {						color: '#000000',						fontSize: '20px'					}				}				            },				yAxis: {				max: 80,				min: 0,								title: {                    text: ''                },								 //gridLineColor: 'rgba(30,146,168,0.5)',				 gridLineColorDashStyle: 'dashdot',				labels: {					style: {						color: '#000000',						fontSize: '20px'					}				},				minRange: 20			},            plotOptions: {				 series: {					borderColor: null,					dataLabels: {						enabled: true,						y: 0,						style: {							color: '#000000',							fontSize: '20px'						}					},				}            },            series: [{                name: 'Children',                data: [ 10, 10.6, 10.1, 14.3, 13.4, 14.3, 15.9, 13.7, 15.1, 14.9, 15.3 ],				marker: {					radius: radiusnumber,					symbol: 'circle'				}            }, {                name: 'Adult',                data: [32.9, 31, 30.5, 31.8, 33.3, 34.7, 33.7, 32.4, 34, 33, 33.5],				marker: {					radius: radiusnumber,					symbol: 'circle'				}				            }]        });						
+	var chart = new Highcharts.Chart({
+            chart: {
+			   
+				borderColor:  null,
+				backgroundColor: null,
+                renderTo: 'graph3',
+                type: 'line',
+                borderWidth: 1,
+				marginTop: 10,
+				marginRight: 0,
+				spacingLeft: 0,
+				spacingBottom: 0,
+				style: {
+					fontFamily: '"roboto", sans-serif', // default font
+					fontSize: '12px',
+					background:'null',
+					fontColor:'red'
+				}
+            },
+            title: {
+                text: '',
+            },
+			tooltip: {
+				enabled: false
+			},
+			legend: {
+				enabled: false,
+				
+			},
+            credits: { 
+               position: {
+                  align: 'center',
+               },
+            },
+            xAxis: {				tickInterval: ticknumber,
+                categories: ['2-9y', '10-19y', '20-29y', '30-39y', '40-49y', '50-59y','60-69y', '70-79y'],
+				tickColor: null,
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				}
+				
+            },	
+			yAxis: {
+				max: 50,
+				min: 0,
+				
+				title: {
+                    text: '% obesity'
+                },
+				
+				 gridLineColor: 'rgba(30,146,168,0.5)',
+				 gridLineColorDashStyle: 'dashdot',
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				},
+				tickInterval:20
+			},
+            plotOptions: {
+				 series: {
+					borderColor: null,
+					dataLabels: {
+						enabled: true,
+						y: 0,
+						style: {
+							color: '#000000',
+							fontSize: '20px'
+						}
+
+					},
+				}
+            },
+            series: [{
+                name: '',
+                data: [null,null,null,{
+                y: 13.6,
+                marker: {
+                    radius: radiusnumber,
+					fillColor: '#1E92A8',
+                    lineWidth: 4,
+                    lineColor: null // inherit from series
+                }
+            }, 16.5,28.8,34.7,{
+                y: 31.2,
+                marker: {
+                    radius: radiusnumber,
+					fillColor: '#1E92A8 ',
+                    lineWidth: 4,
+                    lineColor: null, // inherit from series
+					symbol: 'circle'
+                }
+            } ]
+            }]
+        });
+	var chart = new Highcharts.Chart({
+	
+            chart: {
+			   
+				borderColor:  null,
+				backgroundColor: null,
+                renderTo: 'graph4',
+                type: 'line',
+                borderWidth: 1,
+				marginTop: 10,
+				marginRight: 0,
+				spacingLeft: 0,
+				spacingBottom: 0,
+				style: {
+					fontFamily: '"roboto", sans-serif', // default font
+					fontSize: '12px',
+					background:'null',
+					fontColor:'red'
+				}
+            },
+			
+            title: {
+                text: '',
+            },
+			tooltip: {		shared: true,            useHTML: true,            headerFormat: '<small>AGE GROUP {point.key}</small><table>',            pointFormat: '<tr><td style="color: {series.color}">birth cohor {series.name}: </td>' +                '<td style="text-align: right"><b>{point.y} </b></td></tr>',            footerFormat: '</table>',            valueDecimals: 2,
+			
+				backgroundColor: "#ffffff",
+				style: {
+					padding: 10,
+					fontWeight: 'bold',
+					color:'#000000',
+				},						
+			},
+			legend: {
+				enabled: yesorno,
+				itemMarginTop: 10,
+				itemMarginBottom: 10,
+				itemDistance: 10,
+
+
+				itemStyle: {
+					color: '#000000',
+				},
+				
+			},
+            credits: { 
+               position: {
+                  align: 'center',
+               },
+            },
+            xAxis: {				tickInterval: ticknumber,
+                categories: ['2-9y', '10-19y', '20-29y', '30-39y', '40-49y', '50-59y','60-69y', '70-79y'],
+				tickColor: null,
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				}
+				
+            },	
+			yAxis: {
+				max: 60,
+				min: 0,
+				
+				title: {
+                    text: '% obesity'
+                },
+				
+				 gridLineColor: 'rgba(30,146,168,0.5)',
+				 gridLineColorDashStyle: 'dashdot',
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				},
+				tickInterval:10
+			},
+            plotOptions: {
+				 series: {
+					borderColor: null,
+					dataLabels: {
+						enabled: false,
+						y: 0,
+						style: {
+							color: '#000000',
+							fontSize: '20px'
+						}
+
+					},
+				}
+            },
+            series: [
+						{ name: '1996-2005',
+						   data: [13,null,null,null, null,null,null, null],
+						   marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1986 – 1995',
+						   data: [17.4,18.8,null,null, null,null,null, null],
+						   marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1976 – 1985',
+						   data: [13.6, 15.7, 23.3,null, null,null,null, null],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1966 – 1975',
+						   data: [5.7, 9.9, 20.3,27.8, null,null,null, null],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1956 – 1965',
+						   data: [5.5, 5.3, 11.9,25.2, 35.2,null,null, null],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1946 – 1955',
+						   data: [null, 7.8, 8.5,16.9, 26.4, 36.5,null, null],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1936 – 1945',
+						   data: [null, null, 8, 13.5, 17.1, 29.2, 38.1, null],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						{ name: '1926 – 1935',
+						   data: [null, null, null, 9.9, 15.2, 27.1, 31.2, 29.4],
+						    marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						}
+					]
+        });
+		var chart = new Highcharts.Chart({
+	
+            chart: {
+			   
+				borderColor:  null,
+				backgroundColor: null,
+                renderTo: 'graph5',
+                type: 'line',
+                borderWidth: 1,
+				marginTop: 10,
+				marginRight: 0,
+				spacingLeft: 0,
+				spacingBottom: 0,
+				style: {
+					fontFamily: '"roboto", sans-serif', // default font
+					fontSize: '12px',
+					background:'null',
+					fontColor:'red'
+				}
+            },
+			
+            title: {
+                text: '',
+            },
+			tooltip: {
+			
+				backgroundColor: null,
+				style: {
+					padding: 10,
+					fontWeight: 'bold',
+					color:'#000000',
+				}	
+			},
+			tooltip: {
+				enabled: false
+			},
+			legend: {
+				enabled: false,               
+			},
+            credits: { 
+               position: {
+                  align: 'center',
+               },
+            },
+            xAxis: {				tickInterval: ticknumber,
+                categories: ['2-9y', '10-19y', '20-29y', '30-39y', '40-49y', '50-59y','60-69y', '70-79y'],
+				tickColor: null,
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				}
+				
+            },	
+			yAxis: {
+				max: 60,
+				min: 0,
+				
+				title: {
+                    text: '% obesity'
+                },
+				
+				 gridLineColor: 'rgba(30,146,168,0.5)',
+				 gridLineColorDashStyle: 'dashdot',
+				labels: {
+					style: {
+						color: '#000000',
+						fontSize: '20px'
+					}
+				},
+				tickInterval:10
+			},
+            plotOptions: {
+				 series: {
+					borderColor: null,
+					dataLabels: {
+						enabled: false,
+						y: 0,
+						style: {
+							color: '#000000',
+							fontSize: '20px'
+						}
+
+					},
+				}
+            },
+            series: [
+						{ name: '1996 – 2005',
+							data: [null, null, 8, 13.5, 17.1, 29.2, 38.1, null],
+						   marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						},
+						
+					],
+			    
+        });
+		$('#button1').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 7) {
+						chart5.addSeries({
+							data: [null, 7.8, 8.5,16.9, 26.4, 36.5,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+						$( "#button1" ).addClass( "buttonactive1" );
+
+					}
+		});		
+		$('#button2').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 6) {
+						chart5.addSeries({
+							data: [5.5, 5.3, 11.9,25.2, 35.2,null,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+						$( "#button2" ).addClass( "buttonactive2" );
+
+					}
+		});
+		$('#button3').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 5) {
+						chart5.addSeries({
+							data: [5.7, 9.9, 20.3,27.8, null,null,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+					$( "#button3" ).addClass( "buttonactive3" );
+
+					}
+		});
+		$('#button4').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 4) {
+						chart5.addSeries({
+							data: [13.6, 15.7, 23.3,null, null,null,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+					$( "#button4" ).addClass( "buttonactive4" );
+
+					}
+		});
+		$('#button5').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 3) {
+						chart5.addSeries({
+							data: [17.4,18.8,null,null, null,null,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+					$( "#button5" ).addClass( "buttonactive5" );
+
+					}
+		});
+		$('#button6').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 2) {
+						chart5.addSeries({
+							data: [13,null,null,null, null,null,null, null],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+					$( "#button6" ).addClass( "buttonactive6" );
+
+					}
+		});
+		$('#button7').click(function () {
+					var chart5 = $('#graph5').highcharts();
+					if (chart5.series.length === 1) {
+						chart5.addSeries({
+						   data: [null, null, null, 9.9, 15.2, 27.1, 31.2, 29.4],
+							marker: {
+								radius: radiusnumbers,
+								symbol: 'circle'
+							}
+						});
+					$( "#button7" ).addClass( "buttonactive7" );
+
+					}
+		});
+
+		var chart = $('#graph1').highcharts();
+		$('#sticker-button1').mouseover(function () {
+			chart.series[0].data[0].update(15.3);
+			chart.series[0].data[1].update(33.5);
+			$( "#sticker-button1" ).addClass( "buttonactive" );
+			$( "#sticker-button2" ).removeClass( "buttonactive" );
+			$( "#sticker-button3" ).removeClass( "buttonactive" );
+
+
+		});
+		$('#sticker-button2').mouseover(function () {
+			chart.series[0].data[0].update(16.8);
+			chart.series[0].data[1].update(34.6);
+			$( "#sticker-button1" ).removeClass( "buttonactive" );
+			$( "#sticker-button2" ).addClass( "buttonactive" );
+			$( "#sticker-button3" ).removeClass( "buttonactive" );
+		});
+		$('#sticker-button3').mouseover(function () {
+			chart.series[0].data[0].update(32.1);
+			chart.series[0].data[1].update(68.1);
+			$( "#sticker-button1" ).removeClass( "buttonactive" );
+			$( "#sticker-button2" ).removeClass( "buttonactive" );
+			$( "#sticker-button3" ).addClass( "buttonactive" );
+		});	
+		var chart2 = $('#graph2').highcharts();		var chart2x = $('#graph2x').highcharts();
+
+		$('#gragh2b-1').mouseover(function () {
+			for(var i=0; i<11; i++){
+				chart2.series[0].data[i].update(childrensecond[0][i]);				chart2x.series[0].data[i].update(childrensecond[0][i]);
+				chart2.series[1].data[i].update(adultsecond[0][i]);				chart2x.series[1].data[i].update(adultsecond[0][i]);
+
+			}  
+			$( "#gragh2b-1" ).addClass( "buttonactive" );
+			$( "#gragh2b-2" ).removeClass( "buttonactive" );
+			$( "#gragh2b-3" ).removeClass( "buttonactive" );
+
+
+		});
+
+		$('#gragh2b-2').mouseover(function () {
+			for(var i=0; i<11; i++){
+				chart2.series[0].data[i].update(childrensecond[1][i]);				chart2x.series[0].data[i].update(childrensecond[1][i]);
+				chart2.series[1].data[i].update(adultsecond[1][i]);				chart2x.series[1].data[i].update(adultsecond[1][i]);
+				
+
+			}  
+			$( "#gragh2b-1" ).removeClass( "buttonactive" );
+			$( "#gragh2b-2" ).addClass( "buttonactive" );
+			$( "#gragh2b-3" ).removeClass( "buttonactive" );
+		});
+		$('#gragh2b-3').mouseover(function () {
+			for(var i=0; i<11; i++){
+				chart2.series[0].data[i].update(childrensecond[2][i]);				chart2x.series[0].data[i].update(childrensecond[2][i]);
+				chart2.series[1].data[i].update(adultsecond[2][i]);				chart2x.series[1].data[i].update(adultsecond[2][i]);
+			}  
+			$( "#gragh2b-1" ).removeClass( "buttonactive" );
+			$( "#gragh2b-2" ).removeClass( "buttonactive" );
+			$( "#gragh2b-3" ).addClass( "buttonactive" );
+		});	
+		var chart3 = $('#graph4').highcharts();
+
+		$('#gragh3b-1').mouseover(function () {
+			for(var i=0; i<8; i++){
+				chart3.series[0].data[i].update(year1[0][i]);
+				chart3.series[1].data[i].update(year2[0][i]);
+				chart3.series[2].data[i].update(year3[0][i]);
+				chart3.series[3].data[i].update(year4[0][i]);
+				chart3.series[4].data[i].update(year5[0][i]);
+				chart3.series[5].data[i].update(year6[0][i]);
+				chart3.series[6].data[i].update(year7[0][i]);
+				chart3.series[7].data[i].update(year8[0][i]);
+
+			}  
+			$( "#gragh3b-1" ).addClass( "buttonactive" );
+			$( "#gragh3b-2" ).removeClass( "buttonactive" );
+			$( "#gragh3b-3" ).removeClass( "buttonactive" );
+			$( "#gragh3b-4" ).removeClass( "buttonactive" );
+		});
+		$('#gragh3b-2').mouseover(function () {
+			for(var i=0; i<8; i++){
+				chart3.series[0].data[i].update(year1[1][i]);
+				chart3.series[1].data[i].update(year2[1][i]);
+				chart3.series[2].data[i].update(year3[1][i]);
+				chart3.series[3].data[i].update(year4[1][i]);
+				chart3.series[4].data[i].update(year5[1][i]);
+				chart3.series[5].data[i].update(year6[1][i]);
+				chart3.series[6].data[i].update(year7[1][i]);
+				chart3.series[7].data[i].update(year8[1][i]);
+
+			}; 
+			$( "#gragh3b-1" ).removeClass( "buttonactive" );
+			$( "#gragh3b-2" ).addClass( "buttonactive" );
+			$( "#gragh3b-3" ).removeClass( "buttonactive" );
+			$( "#gragh3b-4" ).removeClass( "buttonactive" );
+		});	
+		$('#gragh3b-3').mouseover(function () {
+			for(var i=0; i<8; i++){
+				chart3.series[0].data[i].update(year1[2][i]);
+				chart3.series[1].data[i].update(year2[2][i]);
+				chart3.series[2].data[i].update(year3[2][i]);
+				chart3.series[3].data[i].update(year4[2][i]);
+				chart3.series[4].data[i].update(year5[2][i]);
+				chart3.series[5].data[i].update(year6[2][i]);
+				chart3.series[6].data[i].update(year7[2][i]);
+				chart3.series[7].data[i].update(year8[2][i]);
+
+			}  
+			$( "#gragh3b-1" ).removeClass( "buttonactive" );
+			$( "#gragh3b-2" ).removeClass( "buttonactive" );
+			$( "#gragh3b-3" ).addClass( "buttonactive" );
+			$( "#gragh3b-4" ).removeClass( "buttonactive" );
+		})	
+		$('#gragh3b-4').mouseover(function () {
+			for(var i=0; i<8; i++){
+				chart3.series[0].data[i].update(year1[3][i]);
+				chart3.series[1].data[i].update(year2[3][i]);
+				chart3.series[2].data[i].update(year3[3][i]);
+				chart3.series[3].data[i].update(year4[3][i]);
+				chart3.series[4].data[i].update(year5[3][i]);
+				chart3.series[5].data[i].update(year6[3][i]);
+				chart3.series[6].data[i].update(year7[3][i]);
+				chart3.series[7].data[i].update(year8[3][i]);
+
+			}  
+			$( "#gragh3b-1" ).removeClass( "buttonactive" );
+			$( "#gragh3b-2" ).removeClass( "buttonactive" );
+			$( "#gragh3b-3" ).removeClass( "buttonactive" );
+			$( "#gragh3b-4" ).addClass( "buttonactive" );
+		})	
+
+		
+				
+});
+
+</script>
+</body>
+</html>
